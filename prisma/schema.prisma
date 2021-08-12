@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model survey_data {
+  id  Int     @default(autoincrement()) @id
+  respondent  String?
+  question  String?
+  answer  String?
+  application String?
+  survey_name String?
+  load_date DateTime  @default(now())
+  category  String?
+}
+
+model filmes {
+    codigo_imdb String @id
+    titulo_filme String
+    titulo_filme_original String?
+    ano_lancamento Int?
+    data_lancamento String?
+    genero String?
+    duracao Int?
+    pais String?
+    lingua String?
+    diretor String?
+    escritor String?
+    empresa_produtora String?
+    atores String?
+    descricao String?
+    media_votos Float?
+    quantidade_votos Float?
+    custo_producao String?
+    eua_lucro_bruto String?
+    lucro_bruto String?
+    metascore Float?
+    qtde_notas_usuarios Float?
+    qtde_notas_criticos Float?
+}
+
+

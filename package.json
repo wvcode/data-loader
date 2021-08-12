@@ -1,7 +1,14 @@
 {
-  "name": "tpl-js-scripts",
-  "version": "1.0.1",
-  "repository": "https://github.com/wvcode/tpl-js-scripts.git",
+  "name": "data-loader",
+  "version": "0.0.1",
+  "repository": "https://github.com/wvcode/data-loader.git",
   "author": "Walter Ritzel <wpcortes@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "prisma": "^2.24.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.24.0",
+    "@wvcode/utils": "^1.0.6"
+  }
 }
